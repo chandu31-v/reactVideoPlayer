@@ -19,11 +19,11 @@ function App() {
           <div className="w-full h-[8%]">
             <Header />
           </div>
-          <div className='flex justify-center h-[92%]'>
-            <div className='w-4/6'>
+          <div className='flex flex-col sm:flex-row justify-center h-[92%]'>
+            <div className='w-full sm:w-4/6 my-2 sm:m-0'>
               <VideoPage />
             </div>
-            <div className='w-2/6 overflow-scroll'>
+            <div className='w-full sm:w-2/6 overflow-scroll p-2 sm:p-0'>
               <PlayList />
             </div>
 
