@@ -1,14 +1,15 @@
-import React, { useEffect,useContext } from "react";
+import React, { useEffect,useContext, useState } from "react";
 import Video from "./videoPlayer"
 import { VideoContext } from "../../App";
 
 function VideoPage() {
 
-    const {url,setUrl} = useContext(VideoContext)
+    const {list,setList} = useContext(VideoContext)
+    const [url,setUrl] = useState()
     useEffect(()=>{
-        setUrl(url)
-        //console.log(url)
-    },[url])
+        setUrl(list.listData[list.index].sources[0])
+
+    },[list.index])
 
     return (<>
         <div className='flex w-full h-full justify-center items-center'>

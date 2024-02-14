@@ -2,18 +2,19 @@ import React, { createContext, useState } from 'react'
 import Header from './components/Header'
 import VideoPage from "./components/video/videoPage"
 import PlayList from './components/playList/playList'
-import playList from "./components/playList/playList.json"
+import listData from "./components/playList/playList.json"
 
 export const VideoContext = createContext(null)
 
 function App() {
 
-  const [url, setUrl] = useState({url:playList['videos'][0].sources[0],index:0})
+  //const [url, setUrl] = useState({url:playListJson['videos'][0].sources[0],index:0})
+  const [list, setList] = useState({listData:listData['videos'],index:0})
   //console.log(url)
 
   return (
     <>
-      <VideoContext.Provider value={{ url, setUrl }}>
+      <VideoContext.Provider value={{ list, setList }}>
         <div className='w-full h-screen bg-slate-500'>
           <div className="w-full h-[8%]">
             <Header />

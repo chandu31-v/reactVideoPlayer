@@ -1,17 +1,19 @@
-import React,{useContext} from "react";
+import React,{useContext, useState} from "react";
 import { VideoContext } from "../../App";
 
-function ListComp({ videoUrl , title , description , index }) {
+function ListComp({ title , id }) {
 
-    const {url,setUrl} = useContext(VideoContext)
+    const {list,setList} = useContext(VideoContext)
+    const [bg,setBg] = useState(list.index)
 
-    const handleClick = (url)=>{
-        setUrl(url)
+    const handleClick = ()=>{
+        console.log(list.listData[id].sources[0])
+        setList({...list,index:id})
     }
 
     return (<>
-        <div className="w-full h-16 bg-slate-600 border-[1px] border-black">
-            <button onClick={()=>handleClick(videoUrl)}>
+        <div className={"w-full h-16 bg-slate-600 border-[1px] border-black"+(id===list.index?"bg-slate-500":"")}>
+            <button onClick={handleClick} className="w-full h-full">
                 {title}
                 {/* {description} */}
             </button>

@@ -1,11 +1,13 @@
-import React from "react";
+import React,{useContext} from "react";
 import ReactPlayer from 'react-player'
-
+import { VideoContext } from "../../App";
 
 function Video({ url , index }) {
 
+    const {list,setList} = useContext(VideoContext)
+
     const videoAutoPlay = ()=>{
-        
+        setList({...list,index:list.index+1})
     }
 
     return (<>
