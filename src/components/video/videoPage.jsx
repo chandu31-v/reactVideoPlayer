@@ -1,17 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect,useContext } from "react";
 import Video from "./videoPlayer"
+import { VideoContext } from "../../App";
 
-function VideoPage({url}) {
+function VideoPage() {
 
-    const [value,setValue] = useState(url)
+    const {url,setUrl} = useContext(VideoContext)
     useEffect(()=>{
-        setValue(url)
+        setUrl(url)
+        //console.log(url)
     },[url])
 
     return (<>
-        <div className='flex w-4/6 h-full justify-center items-center'>
+        <div className='flex w-full h-full justify-center items-center'>
             <div className='flex justify-center items-center w-[90%] h-full'>
-                <Video url="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" />
+                <Video url={url} />
             </div>
         </div>
     </>)
