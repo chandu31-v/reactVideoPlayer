@@ -6,6 +6,8 @@ function Video({ url , index }) {
 
     const {list,setList} = useContext(VideoContext)
 
+    //triggered when the present video is completed
+    //it updates index value to +1 , to play next video in playList
     const videoAutoPlay = ()=>{
         setList({...list,index:list.index+1})
     }
