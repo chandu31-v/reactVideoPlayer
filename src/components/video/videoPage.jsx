@@ -15,7 +15,7 @@ function VideoPage() {
 
     return (<>
         <div className='flex w-full h-full justify-center items-center'>
-            <div className='flex justify-center items-center w-[90%] h-full'>
+            <div className='flex justify-center items-center w-[90%] h-fit p-2 rounded bg-gradient-to-l from-slate-500 to-slate-600'>
                 <Video url={url} />
             </div>
         </div>

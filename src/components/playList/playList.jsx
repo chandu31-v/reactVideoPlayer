@@ -26,7 +26,7 @@ function PlayList() {
     return (<>
 
 
-        <div className='w-full bg-slate-300'>
+        <div className='w-full h-full'>
             {list.listData.map((value, index) => {
                 return <div key={value.title} 
                             draggable 
@@ -34,8 +34,9 @@ function PlayList() {
                             onDragEnter={()=>dragOver.current=index}
                             onDragEnd={handleDragDrop}
                             onDragOver={(e)=>e.preventDefault()}
+                            className="h-1/6 pt-2"
                             >
-                    <ListComp key={value.title} id={index} title={value.title} />
+                    <ListComp key={value.title} id={index} title={value.title} thumb={value.thumb} />
                 </div>
 
             })}
