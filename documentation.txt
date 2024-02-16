@@ -1,0 +1,61 @@
+Video Player using React.js
+
+
+About the use case
+
+To create a video player application using react.js , which allows the user to select and play videos from the playlist defined.
+
+
+Features requirements of the website
+•	The website should play the selected video.
+•	User is able to select the video to play
+•	Users can play, pause, forward , adject play speed and volume.
+•	The videos in the playlist can be reordered(Drag and drop).
+
+
+Additional implemented functionality.
+•	User can search the video to play.
+•	The website is responsive for various screens.
+•	Keyboard controls are supported.
+•	The video can be viewed in full screen mode.
+
+
+Implementation details
+
+The main App file uses the “VideoContext” property and sets the VideoPage and PlayList component.The entire project is divided into 3 different folder structure. They are playList, search and video.  
+
+Playlist:
+
+The list of the videos in the playlist is taken from the pre-defined playlist.json file. The playlist folder has “listComp” which is used to set the preview image and the name of the video. It contains a function handleLCick to handle the click of the playlist videos.
+ The “playList” has the code for showing the searched the videos in the playlist or the entire list if it’s not searched. The “videoPlayList” has the code for the list of the playlist videos and has the implementation for draggable property to allow the dragging of the video list. It has a handleDragDrop function to handle the swapping of the playlist videos.
+
+Search:
+The “search” file has the code for the functionality to set the values set from the “seachPlaylist” file.
+The “searchPlaylist” has the functionality to return the playlist based on the search value.
+
+Video: 
+The “videoPlayer” is component that actually uses the ReactPlayer library to play the video, this is a resuable component that can be used in any other componenets. It has a videoAutoPlay function to trigger when the video ends.
+The “videoPage”  resuses the “videoPlayer” and set the different styling to the UI.
+
+We use the following inbuilt react components such as:
+•	ReactPlayer 
+•	React
+•	{useEffect, useContext, useState}
+
+
+How to install and run locally
+
+Download the zip file from “GIT HUB LINK”. Unzip the folder and open it in visual studio code. Run npm install / npm ci . To run the application run the command “npm run dev” in the terminal and  wait until you get the below output.
+ 
+
+
+Copy the link corresponding to Local variable in output and run it in any browser of your choice.
+
+
+
+Performance using lighthouse
+
+
+
+GIT HUB LINK : GitHub - https://github.com/chandu31-v/reactVideoPlayer
+

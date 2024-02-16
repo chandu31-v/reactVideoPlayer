@@ -8,7 +8,7 @@ function PlayList() {
     const [searchList, setSearchList] = useState([])
 
     return (<>
-        <div className="w-full h-full">
+        <div className="w-full h-lvh">
             {/* Search input component */}
             <div className="h-[7%] sticky top-0">
                 <Search setSearchList={setSearchList} />
