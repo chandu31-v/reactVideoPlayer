@@ -53,8 +53,7 @@ Copy the link corresponding to Local variable in output and run it in any browse
 
 
 
-Performance using lighthouse
-
+Performance using lighthouse - https://github.com/chandu31-v/reactVideoPlayer/blob/main/lightHouse.pdf
 
 
 GIT HUB LINK : GitHub - https://github.com/chandu31-v/reactVideoPlayer
