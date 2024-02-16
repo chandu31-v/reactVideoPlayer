@@ -14,8 +14,8 @@ function VideoPage() {
     },[list.index,list.listData])
 
     return (<>
-        <div className='flex flex-col w-full h-full justify-center items-center'>
-            <div className='flex justify-center items-center w-[90%] h-fit p-2 rounded bg-gradient-to-l from-gray-500 to-gray-600'>
+        <div className='flex flex-col w-full h-full justify-center items-center mt-4 sm:mt-0'>
+            <div className='flex justify-center items-center w-[90%] h-fit sm:p-2 sm:rounded sm:bg-gradient-to-l from-gray-500 to-gray-600'>
                 <Video url={url} />
             </div>
             <div className="w-[90%] mt-6">

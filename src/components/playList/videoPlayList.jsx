@@ -34,7 +34,7 @@ function PlayList() {
                             onDragEnter={()=>dragOver.current=index}
                             onDragEnd={handleDragDrop}
                             onDragOver={(e)=>e.preventDefault()}
-                            className="h-1/6 pt-2"
+                            className="sm:h-1/6 h-1/4 pt-2"
                             >
                     <ListComp key={value.title} title={value.title} thumb={value.thumb} id={index} />
                 </div>
