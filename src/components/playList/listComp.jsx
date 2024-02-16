@@ -7,12 +7,12 @@ function ListComp({ title, id, thumb }) {
 
     //on click, index value is updated to clicked component index
     const handleClick = () => {
-        console.log(list.listData[id].sources[0])
+        //console.log(list.listData[id].sources[0])
         setList({ ...list, index: id })
     }
 
     return (<>
-        <div className={`w-full h-full text-slate-200 px-2 hover:bg-slate-400 font-semibold ${id === list.index ? "bg-slate-500" : "bg-slate-600"} rounded `}>
+        <div className={`w-full h-full text-gray-200 px-2 hover:bg-gray-500 font-semibold ${id === list.index ? "bg-gray-400" : "bg-slate-600"} rounded `}>
             <button onClick={handleClick} className="w-full h-full">
                 <div className="flex w-full">
                     <div className="w-2/5">

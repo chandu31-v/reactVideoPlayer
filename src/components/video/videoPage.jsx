@@ -14,9 +14,12 @@ function VideoPage() {
     },[list.index,list.listData])
 
     return (<>
-        <div className='flex w-full h-full justify-center items-center'>
-            <div className='flex justify-center items-center w-[90%] h-fit p-2 rounded bg-gradient-to-l from-slate-500 to-slate-600'>
+        <div className='flex flex-col w-full h-full justify-center items-center'>
+            <div className='flex justify-center items-center w-[90%] h-fit p-2 rounded bg-gradient-to-l from-gray-500 to-gray-600'>
                 <Video url={url} />
+            </div>
+            <div className="w-[90%] mt-6">
+                <h1 className="text-2xl font-semibold text-gray-300">{list.listData[list.index].title}</h1>
             </div>
         </div>
     </>)

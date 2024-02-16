@@ -1,48 +1,24 @@
-import React, { useContext, useRef, useState } from "react";
-import ListComp from "./listComp";
-import { VideoContext } from "../../App";
+import React, { useState } from "react";
+import VideoPlayList from "./videoPlayList"
+import SearchPlayList from "../search/searchPlayList";
+import Search from "../search/search"
 
 function PlayList() {
 
-    
-    const {list,setList} = useContext(VideoContext)
-
-    //ref -  refers index value, to swap each other place 
-    const drag = useRef(0)
-    const dragOver = useRef(0)
-
-    const handleDragDrop = () => {
-
-        //swap the list , using temp variable
-        const listTemp = [...list.listData]
-        const temp = listTemp[drag.current]
-        listTemp[drag.current] = listTemp[dragOver.current]
-        listTemp[dragOver.current] = temp
-
-        //reset state to updated list
-        setList({...list,listData:listTemp})
-    }
+    const [searchList, setSearchList] = useState([])
 
     return (<>
+        <div className="w-full h-full">
+            {/* Search input component */}
+            <div className="h-[7%] sticky top-0">
+                <Search setSearchList={setSearchList} />
+            </div>
 
-
-        <div className='w-full h-full'>
-            {list.listData.map((value, index) => {
-                return <div key={value.title} 
-                            draggable 
-                            onDragStart={()=>drag.current=index}
-                            onDragEnter={()=>dragOver.current=index}
-                            onDragEnd={handleDragDrop}
-                            onDragOver={(e)=>e.preventDefault()}
-                            className="h-1/6 pt-2"
-                            >
-                    <ListComp key={value.title} id={index} title={value.title} thumb={value.thumb} />
-                </div>
-
-            })}
+            {/* playlist component */}
+            <div className="h-[93%]">
+                {searchList.length > 0 ? <SearchPlayList searchList={searchList} /> : <VideoPlayList />}
+            </div>
         </div>
-
-        
     </>)
 }
 
