@@ -5,7 +5,7 @@ import { VideoContext } from "../../App";
 function Search({ setSearchList }) {
 
     const [search, setSearch] = useState("")
-    const { list, setList } = useContext(VideoContext)
+    const { list } = useContext(VideoContext)
 
     useEffect(() => {
 
@@ -24,7 +24,6 @@ function Search({ setSearchList }) {
                 obj.push({title:"No search found"})
             }
             setSearchList(obj)
-            //console.log(obj)
         }
     }, [search])
 

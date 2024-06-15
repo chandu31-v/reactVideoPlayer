@@ -4,7 +4,7 @@ import { VideoContext } from "../../App";
 
 function VideoPage() {
 
-    const {list,setList} = useContext(VideoContext)
+    const {list} = useContext(VideoContext)
     const [url,setUrl] = useState()
 
     //trigerred when index values is updated or Playlist value is shuffled

@@ -18,16 +18,16 @@ function App() {
   return (
     <>
       <VideoContext.Provider value={{ list, setList }}>
-        <div className='w-full h-screen bg-gradient-to-r from-gray-600 to-gray-900'>
-          <div className='flex flex-col sm:flex-row justify-center h-screen'>
+        <div className='max-w-screen h-screen bg-gradient-to-r from-gray-600 to-gray-900'>
+          <div className='flex flex-col min-[500px]:flex-row justify-center h-screen'>
 
             {/* Video Component */}
-            <div className='w-full sm:w-4/6 my-2 sm:m-0'>
+            <div className='w-full min-[500px]:w-4/6 my-2 sm:m-0'>
               <VideoPage />
             </div>
 
             {/* Playlist component */}
-            <div className='w-full sm:h-full sm:w-2/6 overflow-y-scroll p-4 rounded'>
+            <div className='w-full min-[500px]:h-full min-[500px]:w-2/6 overflow-y-scroll p-4 rounded'>
               <PlayList />
             </div>
 

@@ -2,7 +2,7 @@ import React,{useContext} from "react";
 import ReactPlayer from 'react-player'
 import { VideoContext } from "../../App";
 
-function Video({ url , index }) {
+function Video({ url }) {
 
     const {list,setList} = useContext(VideoContext)
 
